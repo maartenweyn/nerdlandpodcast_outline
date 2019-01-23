@@ -1,0 +1,222 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{forest}
+
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=gray!20},
+  root/.style     = {treenode, font=\Large},
+  topic/.style    = {treenode, font=\ttfamily\normalsize},
+  jeroen/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=red!30},
+  lieven/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=blue!30},
+  hetty/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=green!30},
+  kurt/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=yellow!30},
+  montage/.style    = {shape=rectangle,  font=\ttfamily\normalsize,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=gray!20},
+  dummy/.style    = {circle,draw}
+}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    grow                    = right,
+    sibling distance        = 6em,
+    level distance          = 10em,
+    edge from parent/.style = {draw, -latex},
+    every node/.style       = {font=\footnotesize},
+    sloped
+  ]
+
+ \node [root] {Nerdland\\ Dec 18}
+    child {node [topic][below=2cm] {behind the mic}
+       child {node [lieven] {Lieven}} 
+       child {node [jeroen] {Jeroen}} 
+       child {node [hetty] {Hetty}} 
+       child {node [kurt] {Kurt}} 
+    }
+    child {node [lieven] {Crisper}
+        child {node [hetty] {He Jiankui}
+            child { node [lieven] {Robot Boris}
+                child { node [lieven] {artificiele biefstuk}
+                    child { node [lieven][below=2cm,left=2cm] {mosa meat}
+                        child { node [kurt] {kip Ian}}
+                        child { node [kurt] {mensen eten}
+                        child { node [jeroen] {bilvlees}
+                            child { node [lieven] {prionen ziektes}}
+                        }
+                        child { node [jeroen] {sentinelezen}}
+                        }
+                    }
+                    child { node [lieven] {hacking}
+                        child { node [kurt] {fishing in Duitsland}
+                            child { node [jeroen] {bitcoin stickers}}
+                            child { node [lieven] {hecksenjacht}
+                                child { node [lieven] {IWGMC}}
+                            }
+                            child { node [jeroen] {clickbait vs nieuws}}
+                        }
+                        child { node [lieven][below=-5cm,left=2cm]  {Jeanne Calment}
+                            child { node [lieven] {longivity spots}}
+                            child { node [lieven] {landing maan}
+                                child { node [kurt] {kopiechinees}}
+                                child { node [jeroen] {nieuwjaarsverplichting}}
+                                child { node [lieven] {kak op de maan}
+                                    child { node [lieven] {smokkelen}}
+                                }
+                                child { node [lieven] {2 ijsbollen}
+                                    child { node [lieven] {Bennu}
+                                        child { node [jeroen] {IWGMC}}
+                                        child { node [lieven] {maanzand}
+                                            child { node [jeroen] {chicken nuggets}}
+                                            child { node [jeroen] {zeehond met aal}
+                                                child { node [lieven] {fotosynthese}
+                                                    child { node [hetty] {fotosynthese}
+                                                        child { node [jeroen] {Rubisco}}
+                                                        child { node [lieven] {tabaksplant}}
+                                                        child { node [lieven] {maisplant}}
+                                                        child { node [hetty] {geen crisper}}
+                                                        child { node [lieven] {HoloLens}
+                                                            child { node [lieven] {airtap}
+                                                                child { node [jeroen] {tetjes knijpen}}
+                                                                child { node [lieven] {Black Mirror}
+                                                                    child { node [lieven] {Charlie Brooker}}
+                                                                    child { node [lieven] {Musk nieuws}
+                                                                        child { node [lieven][below=5cm,left=-2cm] {SpaceX}
+                                                                            child { node [lieven] {Dragon}}
+                                                                            child { node [lieven] {gat ISS}
+                                                                                child { node [lieven] {Seed Vault Catan}
+                                                                                    child { node [jeroen] {James Bond}}
+                                                                                }
+                                                                            }
+                                                                            child { node [lieven] {Elysium}}
+                                                                        }
+                                                                        child { node [lieven] [below=1cm,right=3cm] {Boring company}
+                                                                            child { node [hetty] {lelijke tunnel}}
+                                                                            child { node [jeroen] {trage lift}}
+                                                                            child { node [kurt] [right=1cm] {turning into anti musk}}
+                                                                            child { node [jeroen] {rijke mensen sluis}}
+                                                                            child { node [lieven] {bricks}
+                                                                                child { node [jeroen] {Monty Python}}
+                                                                            }
+                                                                        }
+                                                                        child { node [lieven] [below=-2cm] {modelbouw rakket}
+                                                                            child { node [jeroen] {genoeg watten}}
+                                                                            child { node [lieven] {Jeff Bezos}
+                                                                                child { node [lieven] {New Glen}}
+                                                                                child { node [jeroen] {Richard Branson}
+                                                                                    child { node [lieven] {Virgin Galactic}
+                                                                                        child { node [lieven] {begin van de ruimte}}
+                                                                                        child { node [jeroen] {John McAfee}
+                                                                                            child { node [jeroen] {walvissen...}}
+                                                                                            child { node [lieven] {Facebook}
+                                                                                                child { node [kurt] {datasharing}}
+                                                                                                child { node [kurt] {feestboek}
+                                                                                                    child { node [kurt] {JAS}}
+                                                                                                }
+                                                                                                child { node [lieven] {celontwikkeling}
+                                                                                                    child { node [hetty] {RNA}
+                                                                                                        child { node [hetty] {kankeronderzoek}}
+                                                                                                        child { node [lieven] {bottle flip robot}
+                                                                                                            child { node [jeroen] {eitjes schieten}}
+                                                                                                            child { node [lieven] {berenspray}
+                                                                                                                child { node [jeroen] {breinscheet}}
+                                                                                                                child { node [lieven] {Jean Bourgain}
+                                                                                                                    child { node [lieven] {HLN lichtsnelheid}
+                                                                                                                        child { node [jeroen] {schuld van de sossen}}
+                                                                                                                        child { node [lieven] {baviaan met varkenshart}
+                                                                                                                            child { node [hetty] {xenotransplantatie}}
+                                                                                                                            child { node [lieven] {orgaandonor}}
+                                                                                                                            child { node [jeroen] {fokwombat}
+                                                                                                                                child { node [lieven] {accoustic levitaton}
+                                                                                                                                    child { node [jeroen] {Louis Tobak}}
+                                                                                                                                    child { node [lieven] {Fresh Prince}
+                                                                                                                                        child { node [jeroen] {Fortnite}}
+                                                                                                                                        child { node [lieven] {Kerstpuzzel MIL}
+                                                                                                                                            child { node [lieven] {Daaaaag}}
+                                                                                                                                        }
+                                                                                                                                        child { node [jeroen] {Carltondance}}
+                                                                                                                                    }
+                                                                                                                                    child { node [jeroen] {druppelhaard}}
+                                                                                                                                }
+                                                                                                                                child { node [lieven] {wombat knuffels}}
+                                                                                                                            }
+                                                                                                                            child { node [jeroen] {magdawel?}}
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                                child { node [kurt] {bear spray}}
+                                                                                                            }
+                                                                                                        }
+                                                                                                        child { node [hetty] {RNA Atlas}}
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        child { node [jeroen]  [below=-2cm,left=-2cm] {slecht nieuws?}
+                                                                            child { node [lieven] {toiletmode}}
+                                                                        }
+                                                                        child { node [lieven] [below=-2cm,left=-2cm]{orchide banks}
+                                                                            child { node [jeroen] {CEO twitter}
+                                                                                child { node [jeroen] {ISIS amulet}}
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    child { node [jeroen] [below=-5cm] {interactieve tv}
+                                                                        child { node [jeroen] [below=-1cm] {gelokaliseerde films}}
+                                                                    }
+                                                                }
+                                                                child { node [jeroen] {moedige ouders}}
+                                                            }
+                                                            child { node [jeroen] {AR battlefield}}
+                                                        }
+                                                        child { node [hetty] {GGO debat}}
+                                                        child { node [montage] {crisper kan dat wel}}
+                                                        child { node [lieven] {2020}
+                                                            child { node [kurt] {is binnen 11 jaar}}
+                                                            child { node [jeroen] {plasmido domingo}}
+                                                        }
+                                                    }
+                                                    child { node [jeroen] {Ceasar drinken}}
+                                                }
+                                                child { node [montage] {aal is dood}}
+                                            }
+                                            child { node [lieven] {Ultima Thule}}
+                                        }
+                                    }
+                                    child { node [lieven] {scatologie}
+                                        child { node [jeroen][below=-2cm] {scatman}
+                                            child { node [jeroen] {JAS}}
+                                        }
+                                    }
+                                }
+                                child { node [lieven] {muizeneten bij Space X}}
+                                child { node [kurt] {maansverduistering}
+                                    child { node [jeroen] {Virton}}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            child { node [jeroen] {China}
+                child { node [jeroen] {Johnny Trash}}
+                child { node [jeroen] {Scarlett Johansson}}
+            }
+            child { node [lieven] {DNA doping}}
+        }
+    }
+;
+\end{tikzpicture}
+\end{document}
