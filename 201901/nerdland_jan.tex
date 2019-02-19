@@ -1,0 +1,132 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{forest}
+
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=gray!20},
+  root/.style     = {treenode, font=\Large},
+  topic/.style    = {treenode, font=\ttfamily\normalsize},
+  jeroen/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=red!30},
+  lieven/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=blue!30},
+  hetty/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=green!30},
+  kurt/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=yellow!30},
+  peter/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=lime!30},
+  stephanie/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=brown!30},
+  marian/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=cyan!30},
+  natha/.style    = {treenode, font=\ttfamily\normalsize,
+                     bottom color=orange!30},
+  montage/.style    = {shape=rectangle,  font=\ttfamily\normalsize,
+                     draw, align=center,
+                     top color=white,
+                     bottom color=gray!20},
+  dummy/.style    = {circle,draw}
+}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    grow                    = right,
+    sibling distance        = 6em,
+    level distance          = 10em,
+    edge from parent/.style = {draw, -latex},
+    every node/.style       = {font=\footnotesize},
+    sloped
+  ]
+
+ \node [root] {Nerdland\\ Jan 19}
+    child {node [topic][below=7cm] {behind the mic}
+       child {node [lieven] {Lieven}} 
+       child {node [stephanie] {Stephanie}} 
+       child {node [marian] {Marian}} 
+       child {node [peter] {Peter}} 
+       child {node [hetty] {Hetty}} 
+       child {node [natha] {Natha}} 
+    }
+    child {node [hetty] {He Jiankui}
+    child { node [marian] {luisteren naar hersenen}
+			child { node [natha] [below=1cm]{maanplant}
+				child { node [lieven][below=1cm,left=1cm] {criminele gamers}
+				child { node [peter][below=1cm,left=1cm]  {rip slak}
+						child { node [peter] {insecten barbie}}
+						child { node [lieven] {DNA}
+							child { node [lieven] {23andMe halfzus}}
+							child { node [stephanie] {ruzie in CERN}	
+								child { node [lieven] {Elon Musk}
+									child { node [lieven] {Tesla}
+										child { node [marian] {white hat hacker}
+											child { node [lieven] {Inti}}
+										}
+										child { node [lieven] {wc humor}
+											child { node [lieven] {valentijn}}
+										}
+									}
+									child { node [lieven] {Starship}}
+									child { node [lieven] {SpaceX}}
+									child { node [lieven] {Apple}
+										child { node [marian] {Facebook}
+											child { node [marian] {teeners ronselen}}
+											child { node [peter] {politieke voorkeur}}
+											child { node [lieven] {10 year challenge}
+												child { node [lieven][below=1cm,left=1cm]  {gezicht uit DNA}
+													child { node [lieven] {BDW}}
+												}
+											}
+										}
+										child { node [marian] {Facetime bug}}
+									}
+									child { node [lieven] {Jeff Bezos flirt}}
+									child { node [hetty] {Kanker Cure}
+										child { node [hetty] {gemanipuleerde kippen}}
+										child { node [lieven] {zwetende kont robot}
+											child { node [lieven] {uranus probing}
+												child { node [hetty] {geclonede apen}
+													child { node [marian][below=3cm,left=1cm]  {CES}
+														child { node [marian] {oprolbare scherm}
+															child { node [montage] {LG}}
+														}
+														child { node [marian] {10 sec tandenpoetsen}}
+														child { node [lieven] [below=1cm, right=1cm]{varia}
+															child { node [lieven] {meteoriet tijdens maansverduistering}}
+															child { node [lieven]{alzheimer vs tandontsteking}}
+															child { node [lieven]{jong bloed in oude mensen}}
+															child { node [lieven] {VR hypnose}}																						child { node [lieven] {call for money}
+																child { node [lieven] {DAAaaag}}
+															}												
+														}
+														child { node [marian] {Follow Me koffer}}
+														child { node [lieven] {katten domotica}}
+														child { node [lieven] {pizza robot hond}}
+														child { node [lieven] {IBM quantumcomputer}}
+													}
+													child { node [montage] {defects in apen}}
+												}
+											}
+										}
+									}
+								}
+								child { node [lieven]{urinerende Nobelprijswinnaars}}
+							}
+							child { node [lieven] {FamilyTree FBI}}
+							child { node [lieven] {Nederland}}
+						}						
+					}
+				}
+			}
+			child { node [montage] {sprekende hersenen}}
+		}
+		child { node [lieven] {Christian Army Mothers}}
+		child { node [montage] {andere wetenschapper}}
+    }
+    ;
+\end{tikzpicture}
+\end{document}
